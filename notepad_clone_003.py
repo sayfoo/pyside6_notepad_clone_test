@@ -12,7 +12,7 @@ class MyApp(QMainWindow):
         self.btn = QPushButton("push button")
         self.lab = QLabel()
         self.lab.setAlignment(Qt.AlignCenter)
-        pixmap = QPixmap(QImage('img/mk.png'))
+        pixmap = QPixmap(QImage('img/large_qfactory.png'))
         self.lbl_img = QLabel()
         self.lbl_img.setPixmap(pixmap)
         self.lbl_size = QLabel('Width: '+str(pixmap.width())+', Height: '+str(pixmap.height()))
