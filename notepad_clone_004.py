@@ -17,11 +17,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         pixmap = QPixmap(QImage('img/large_qfactory.png'))
         self.label.setPixmap(pixmap)
         self.label.setScaledContents(True)
-        # layout = QVBoxLayout()
-        # layout.addWidget(self.label)
-        # container = QWidget()
-        # container.setLayout(layout)
-        # self.setCentralWidget(container)
+
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.label)
+        self.layout.addWidget(self.plainTextEdit)
+
+        self.container = QWidget()
+        self.container.setLayout(self.layout)
+        self.setCentralWidget(self.container)
 
         self.action_W.triggered.connect(self.add_window)  # 새창 QAction name is action_W
         self.action_O.triggered.connect(self.open_file)   # 열기(O)
