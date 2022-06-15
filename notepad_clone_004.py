@@ -15,12 +15,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         print(f"{os.getcwd() = }")
 
         pixmap = QPixmap(QImage('img/large_qfactory.png'))
-        self.label.setPixmap(pixmap)
-        self.label.setScaledContents(True)
+        self.top_label.setPixmap(pixmap)
+        self.top_label.setScaledContents(True)
+
+        pixmap = QPixmap(QImage('img/bizarim.png'))
+        self.bottom_label.setPixmap(pixmap)
+        self.bottom_label.setScaledContents(True)
 
         self.layout = QVBoxLayout()
-        self.layout.addWidget(self.label)
+        self.layout.addWidget(self.top_label)
         self.layout.addWidget(self.plainTextEdit)
+        self.layout.addWidget(self.bottom_label)
 
         self.container = QWidget()
         self.container.setLayout(self.layout)
