@@ -35,19 +35,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setWindowIcon(QIcon("../img/icon_q.png"))
         self.setWindowTitle("This is a pushButton test for Great Works")
 
-        self.pushButton_2.clicked.connect(self.pushButton_2_button_clicked)
-        self.pushButton_3.clicked.connect(self.pushButton_3_button_clicked)
-        self.pushButton_1.clicked.connect(self.pushButton_1_button_clicked)
+        self.pushButton_2.clicked.connect(self.left_pushButton_clicked)
+        self.pushButton_3.clicked.connect(self.right_pushButton_clicked)
+        self.pushButton_1.clicked.connect(self.subwindow_pushButton_clicked)
 
-    def pushButton_2_button_clicked(self):
+    def left_pushButton_clicked(self):
         self.pwd = os.getcwd()
         self.textEdit_1.append((f"버튼 누름\n {self.pwd}"))
 
-    def pushButton_3_button_clicked(self):
+    def right_pushButton_clicked(self):
         self.text = self.textEdit_1.toPlainText()
         self.textEdit_2.setText(self.text)
 
-    def pushButton_1_button_clicked(self):
+    def subwindow_pushButton_clicked(self):
         self.hide()
         self.text = self.textEdit_1.toPlainText()
         self.sub_window = SubWindow()
