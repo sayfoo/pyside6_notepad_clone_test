@@ -12,6 +12,8 @@ class SubWindow(QDialog, QWidget, Ui_Form):
     def __init__(self):
         super(SubWindow, self).__init__()
         self.initUI()
+        self.setWindowIcon(QIcon("../img/icon_cat.png"))
+        self.setWindowTitle("This is a Form test for Great Works")
         self.show()
 
     def initUI(self):
@@ -50,7 +52,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.text = self.textEdit_1.toPlainText()
         self.sub_window = SubWindow()
         self.sub_window.textEdit.setText(self.text)
-        self.sub_window.exec()
+        self.sub_window.exec() # 종료하면 돌아가도록 sys.exit()는 안한다.
         self.show()
 
 
@@ -58,6 +60,6 @@ if __name__ == "__main__":
     print(">>>>> 시작 <<<<<<")
     app = QApplication(sys.argv)
     window = MainWindow()
-    # apply_stylesheet(app, theme='dark_yellow.xml', extra=extra)
+    apply_stylesheet(app, theme='dark_yellow.xml')
     window.show()
     sys.exit(app.exec())
