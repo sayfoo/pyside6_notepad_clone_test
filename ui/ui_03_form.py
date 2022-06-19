@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file '03_formAOPDbg.ui'
+## Form generated from reading UI file '03_formEyLoMp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.0
 ##
@@ -15,8 +15,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QPushButton, QSizePolicy, QVBoxLayout,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QPushButton, QSizePolicy, QTextEdit,
+    QVBoxLayout, QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -27,6 +27,15 @@ class Ui_Form(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
+        self.textEdit = QTextEdit(Form)
+        self.textEdit.setObjectName(u"textEdit")
+        font = QFont()
+        font.setFamilies([u"\ub098\ub214\uba85\uc870"])
+        font.setPointSize(18)
+        self.textEdit.setFont(font)
+
+        self.verticalLayout.addWidget(self.textEdit)
+
         self.pushButton = QPushButton(Form)
         self.pushButton.setObjectName(u"pushButton")
 

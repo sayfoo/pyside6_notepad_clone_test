@@ -19,6 +19,7 @@ class SubWindow(QDialog, QWidget, Ui_Form):
         self.pushButton.clicked.connect(self.back_to_the_main_window)
 
 
+
     def back_to_the_main_window(self):
         self.close()
 
@@ -26,6 +27,8 @@ class SubWindow(QDialog, QWidget, Ui_Form):
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
+        self.sub_window = None
+        self.text = None
         self.setupUi(self) # class Ui_MainWindow(object)
         self.setWindowIcon(QIcon("../img/icon_q.png"))
         self.setWindowTitle("This is a pushButton test for Great Works")
@@ -44,7 +47,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def pushButton_1_button_clicked(self):
         self.hide()
+        self.text = self.textEdit_1.toPlainText()
         self.sub_window = SubWindow()
+        self.sub_window.textEdit.setText(self.text)
         self.sub_window.exec()
         self.show()
 
