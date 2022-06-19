@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'notepad_clone_01lhtgYv.ui'
+## Form generated from reading UI file 'notepad_clone_01gxDBrG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.0
 ##
@@ -98,6 +98,12 @@ class Ui_MainWindow(object):
         self.plainTextEdit = QPlainTextEdit(self.centralwidget)
         self.plainTextEdit.setObjectName(u"plainTextEdit")
         self.plainTextEdit.setGeometry(QRect(0, 170, 821, 481))
+        font = QFont()
+        font.setFamilies([u"\ub098\ub214\uba85\uc870"])
+        font.setPointSize(16)
+        font.setBold(False)
+        self.plainTextEdit.setFont(font)
+        self.plainTextEdit.setLineWidth(-1)
         self.bottom_label = QLabel(self.centralwidget)
         self.bottom_label.setObjectName(u"bottom_label")
         self.bottom_label.setGeometry(QRect(7, 655, 811, 51))

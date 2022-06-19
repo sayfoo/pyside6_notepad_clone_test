@@ -36,6 +36,17 @@
       <height>481</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>나눔고딕</family>
+      <pointsize>16</pointsize>
+      <bold>true</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="lineWidth">
+     <number>-1</number>
+    </property>
    </widget>
    <widget class="QLabel" name="bottom_label">
     <property name="geometry">

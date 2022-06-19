@@ -31,10 +31,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.container.setLayout(self.layout)
         self.setCentralWidget(self.container)
 
+        self.plainTextEdit.keyReleaseEvent = self.process_key # 쌍자음 문제 해결책
+
+
         self.action_W.triggered.connect(self.add_window)  # 새창 QAction name is action_W
         self.action_O.triggered.connect(self.open_file)   # 열기(O)
         self.action_S.triggered.connect(self.save_file)   # 저장(S)
         self.windows = []
+
+    def process_key(self, event):
+        print(f"{type(event) = }") # <class 'PySide6.QtGui.QKeyEvent'>
+        pass
 
     def add_window(self):
         new_window = MainWindow()
@@ -66,6 +73,6 @@ if __name__ == "__main__":
         # Density Scale
         'density_scale': '-2',
     }
-    apply_stylesheet(app, theme='dark_yellow.xml', extra=extra)
+    # apply_stylesheet(app, theme='dark_yellow.xml', extra=extra)
     window.show()
     sys.exit(app.exec())
