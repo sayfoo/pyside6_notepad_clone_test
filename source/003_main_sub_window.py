@@ -8,7 +8,7 @@ from qt_material import apply_stylesheet
 import os, sys
 
 
-class SubWindow(QDialog, QWidget, Ui_Form):
+class SubWindow(QDialog, Ui_Form):
     def __init__(self):
         super(SubWindow, self).__init__()
         self.initUI()
@@ -19,8 +19,6 @@ class SubWindow(QDialog, QWidget, Ui_Form):
     def initUI(self):
         self.setupUi(self) # class Ui_MainWindow(object)
         self.pushButton.clicked.connect(self.back_to_the_main_window)
-
-
 
     def back_to_the_main_window(self):
         self.close()
@@ -35,9 +33,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setWindowIcon(QIcon("../img/icon_q.png"))
         self.setWindowTitle("This is a pushButton test for Great Works")
 
+        self.textEdit_1.keyReleaseEvent = self.process_key  # 쌍자음 문제 해결책
+
         self.pushButton_2.clicked.connect(self.left_pushButton_clicked)
         self.pushButton_3.clicked.connect(self.right_pushButton_clicked)
         self.pushButton_1.clicked.connect(self.subwindow_pushButton_clicked)
+
+    def process_key(self, event):
+        print(f"{type(event) = }") # <class 'PySide6.QtGui.QKeyEvent'>
+        pass
 
     def left_pushButton_clicked(self):
         self.pwd = os.getcwd()
@@ -52,7 +56,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.text = self.textEdit_1.toPlainText()
         self.sub_window = SubWindow()
         self.sub_window.textEdit.setText(self.text)
-        self.sub_window.exec() # 종료하면 돌아가도록 sys.exit()는 안한다.
+        self.sub_window.exec() # 종료(close)하면 돌아 가도록 sys.exit()는 안한다.
         self.show()
 
 
