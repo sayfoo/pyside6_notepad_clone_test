@@ -8,7 +8,7 @@ from qt_material import apply_stylesheet
 import os, sys
 
 
-class SubWindow(QDialog, Ui_Form):
+class SubWindow(QDialog, QWidget, Ui_Form):
     def __init__(self):
         super(SubWindow, self).__init__()
         self.initUI()
