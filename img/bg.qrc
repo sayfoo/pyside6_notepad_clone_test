@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="images">
+    <file>login_btn.png</file>
+    <file>icon_q.png</file>
+    <file>large_qfactory.png</file>
+    <file>lion_cat.png</file>
+    <file>login_screen.png</file>
+  </qresource>
+</RCC>
