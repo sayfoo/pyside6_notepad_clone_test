@@ -14,6 +14,12 @@ class MyLogin(QDialog, Ui_Login):
         super().__init__()
         self.setupUi(self)
         self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
+        self.plt = QPalette()
+        self.pmp = QPixmap("../img/login_screen.png")
+        # pmp.scaled(self.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
+        self.plt.setBrush(QPalette.Window, QBrush(self.pmp))
+        self.setPalette(self.plt)
+        # self.login_btn.setGeometry(125, 479, 441, 71)
 
 
 class MyDialog(QDialog, Ui_Dialog):
@@ -42,7 +48,7 @@ class MyApp(QWidget, Ui_Form):
         self.login.login_btn.clicked.connect(self.goto_the_main_window)
 
         self.goto_the_login_window()
-
+        print("과연 여기를 지나갔을까...")
         # ---------------------------------------------------------------------------------------------------#
         #                       QPalette : set brush image with pixmap on the window
         # ---------------------------------------------------------------------------------------------------#
@@ -50,11 +56,13 @@ class MyApp(QWidget, Ui_Form):
         self.pmp = QPixmap("../img/large_qfactory.png")
         # pmp.scaled(self.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
         self.plt.setBrush(QPalette.Window, QBrush(self.pmp))
-        self.setPalette(self.plt)
+        self.groupBox.setPalette(self.plt)
+        print("그런데 아무런 효과가 없넹...")
         # ---------------------------------------------------------------------------------------------------#
         self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
         # ---------------------------------------------------------------------------------------------------#
         self.show()
+        print("쇼가 끝났는데도...")
 
     def goto_the_login_window(self):
         self.login.exec()
@@ -82,6 +90,12 @@ if __name__ == "__main__":
         print("QApplication.instance() is executed...")
         app = QApplication.instance()
     exe = MyApp()
+
+    plt = QPalette()
+    pmp = QPixmap("../img/large_qfactory.png")
+    # pmp.scaled(self.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
+    plt.setBrush(QPalette.Window, QBrush(pmp))
+    exe.groupBox.setPalette(plt)
     try:
         sys.exit(app.exec())
     except SystemExit as e:
