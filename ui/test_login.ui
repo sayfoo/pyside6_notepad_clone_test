@@ -75,45 +75,6 @@ background-color: rgb(66, 195, 255);</string>
     <string>LOGIN</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="userid">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>285</y>
-     <width>181</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>181</width>
-     <height>31</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>181</width>
-     <height>31</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
-   </property>
-   <property name="placeholderText">
-    <string>USER ID</string>
-   </property>
-  </widget>
   <widget class="QComboBox" name="combo_02">
    <property name="geometry">
     <rect>
@@ -154,45 +115,6 @@ background-color: rgb(66, 195, 255);</string>
      <string>한국어</string>
     </property>
    </item>
-  </widget>
-  <widget class="QTextEdit" name="psswd">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>357</y>
-     <width>181</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>181</width>
-     <height>31</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>181</width>
-     <height>31</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
-   </property>
-   <property name="placeholderText">
-    <string>PASSWORD</string>
-   </property>
   </widget>
   <widget class="QComboBox" name="combo_01">
    <property name="geometry">
@@ -239,6 +161,90 @@ background-color: rgb(66, 195, 255);</string>
      <string>본사</string>
     </property>
    </item>
+  </widget>
+  <widget class="QLineEdit" name="passwd">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>357</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>181</width>
+     <height>31</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>181</width>
+     <height>31</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>PASSWORD</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="passwd_2">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>285</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>181</width>
+     <height>31</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>181</width>
+     <height>31</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="placeholderText">
+    <string>USER ID</string>
+   </property>
   </widget>
  </widget>
  <resources/>

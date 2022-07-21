@@ -19,7 +19,7 @@ class MyLogin(QDialog, Ui_Login):
         # pmp.scaled(self.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
         self.plt.setBrush(QPalette.Window, QBrush(self.pmp))
         self.setPalette(self.plt)
-        # self.login_btn.setGeometry(125, 479, 441, 71)
+
 
 
 class MyDialog(QDialog, Ui_Dialog):
